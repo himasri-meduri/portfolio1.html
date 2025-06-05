@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dial pad</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+    }
+
+    .dialpad {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    .dial {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .call-button {
+      grid-column: span 3;
+      background-color: green;
+      color: white;
+      border-radius: 25px;
+      height: 40px;
+      width: 100%;
+    }
+
+    #display {
+      font-size: 24px;
+      margin-bottom: 10px;
+      padding: 10px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid gray;
+    }
+
+    #clear-button {
+      display: none; 
+      justify-content: center;
+      color:black;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="dial">
+    <div id="display"></div>
+    <button id="clear-button" onclick="clearLast()">X</button>
+    <div class="dialpad">
+      <button onclick="press('1')">1</button>
+      <button onclick="press('2')">2</button>
+      <button onclick="press('3')">3</button>
+      <button onclick="press('4')">4</button>
+      <button onclick="press('5')">5</button>
+      <button onclick="press('6')">6</button>
+      <button onclick="press('7')">7</button>
+      <button onclick="press('8')">8</button>
+      <button onclick="press('9')">9</button>
+      <button onclick="press('*')">*</button>
+      <button onclick="press('0')">0</button>
+      <button onclick="press('#')">#</button>
+      <button class="call-button">Call</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let clearButton = document.getElementById('clear-button');
+
+    function press(value) {
+      display.textContent += value;
+      clearButton.style.display = "inline-block"; 
+    }
+
+    function clearLast() {
+      display.textContent = display.textContent.slice(0, -1);
+      if (display.textContent === "") {
+        clearButton.style.display = "none"; 
+      }
+    }
+  </script>
+</body>
+</html>
