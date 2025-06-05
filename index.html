@@ -155,13 +155,57 @@
   color: #1e598b;
   text-decoration: underline;
 }
+.edu-buttons1 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .edu-buttons1 button {
+      background:gray;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+.edu-buttons1 a{
+      background:gray;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+.button-link {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2980b9;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+.button-link:hover {
+  background: #1f618d;
+}
+
   </style>
 </head>
 <body>
   <div class="container">
     <header class="header">
       <div class="header-content">
-        <img src="hima3.jpg" alt="Profile Photo" class="profile-pic">
+        <img src="hima pic.jpg" alt="Profile Photo" class="profile-pic">
         <h1 class="name">Meduri Himasri</h1>
         <p class="tagline">Aspiring Engineer | Passionate Learner | Tech Enthusiast</p>
       </div>
@@ -170,8 +214,8 @@
     <section class="education-section">
       <h2 class="section-title">Education</h2>
       <div class="edu-buttons">
-        <button onclick="showAlert('10th')">10th</button>
-        <button onclick="showAlert('Diploma')">Diploma</button>
+        <a href="10th.html" onclick="showAlert('10th')" class="button-link">10th</a>
+        <a href="diploma.html" onclick="showAlert('Diploma')"class="button-link">Diploma</a>
         <button onclick="showAlert('B.Tech')">B.Tech</button>
       </div>
     </section>
@@ -179,12 +223,13 @@
     <section class="skills-section">
       <h2 class="section-title">Skills</h2>
       <div class="skills-list">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>React</span>
-        <span>Python(Basic)</span>
-        
-        <span>Machine Learning</span>
+         <div class="edu-buttons1">
+        <a href="html1.html" class="skill-button"> <i class="fa-brands fa-html5"></i> HTML</a>
+        <a href="css1.html" class="skill-button"> <i class="fa-brands fa-css3-alt"></i> CSS</a>
+        <a href="javascript.html" class="skill-button"><i class="fa-brands fa-js"></i> JavaScript</a>
+        <a href="python.html" class="skill-button"><i class="fa-brands fa-python"></i> Python</a>
+        <a href="ml.html" class="skill-button"><i class="fa-regular fa-eye"></i> Machine Learning</a>
+      </div>
       </div>
     </section>
 
@@ -228,3 +273,4 @@
   </script>
 </body>
 </html>
+
