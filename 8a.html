@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compare Numbers</title>
+  <script>
+    function compareNumbers() {
+      // Prompt the user to enter three integers
+      let num1 = parseInt(prompt("Enter the first number:"));
+      let num2 = parseInt(prompt("Enter the second number:"));
+      let num3 = parseInt(prompt("Enter the third number:"));
+
+      let message;
+
+      if (num1 === num2 && num2 === num3) {
+        message = "EQUAL NUMBERS";
+      } else {
+        let largest = num1;
+
+        if (num2 > largest) {
+          largest = num2;
+        }
+        if (num3 > largest) {
+          largest = num3;
+        }
+
+        message = largest + " LARGER NUMBER";
+      }
+
+      // Show the message in an alert (info message dialog)
+      alert(message);
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript Conditional Statements Example</h2>
+  <button onclick="compareNumbers()">Enter Numbers</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Methods</title>
+</head>
+<body>
+  <h1>Input Example</h1>
+
+  <input type="text" id="textbox" placeholder="Type something" />
+  <button onclick="getInput()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    let name = prompt("Enter your name:");
+    console.log("Name from prompt: " + name);
+    function getInput() {
+      let value = document.getElementById("textbox").value;
+      document.getElementById("result").innerText = "You entered: " + value;
+    }
+  </script>
+</body>
+</html>

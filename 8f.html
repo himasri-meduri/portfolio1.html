@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Denomination Calculator</title>
+  <script>
+    function calculateDenominations() {
+      let amount = parseInt(prompt("Enter the amount in Rs:"));
+      let denominations = [100, 50, 20, 10, 5, 2, 1];
+      let result = "Denominations:\n";
+
+      denominations.forEach(denomination => {
+        let count = Math.floor(amount / denomination);
+        if (count > 0) {
+          result += `${count} x Rs.${denomination}\n`;
+          amount = amount % denomination;
+        }
+      });
+
+      alert(result);
+    }
+  </script>
+</head>
+<body>
+  <h2>Bank Denomination</h2>
+  <button onclick="calculateDenominations()">Enter Amount</button>
+</body>
+</html>

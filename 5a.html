@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color References</title>
+    <style>
+        /* Named colors */
+        .named-color { color: crimson; }
+
+        /* Hexadecimal colors */
+        .hex-color { color: #3498db; }
+        .hex-short { color: #f06; } /* Short hex */
+
+        /* RGB colors */
+        .rgb-color { color: rgb(255, 99, 71); }
+        .rgba-color { color: rgba(255, 99, 71, 0.5); } /* With transparency */
+
+        /* HSL colors */
+        .hsl-color { color: hsl(120, 100%, 50%); }
+        .hsla-color { color: hsla(120, 100%, 50%, 0.5); } /* With transparency */
+
+        /* Current color keyword */
+        .current-color { color: #ff6347; }
+        .current-color-child { color: currentColor; } /* Inherits from parent */
+
+        /* Transparent keyword */
+        .transparent-bg { background-color: transparent; }
+
+        /* Inherit keyword */
+        .inherit-color { color: inherit; }
+    </style>
+</head>
+<body>
+    <h1>CSS Color References Demo</h1>
+
+    <p class="named-color">This uses a named color (crimson).</p>
+    <p class="hex-color">This uses a hexadecimal color (#3498db).</p>
+    <p class="hex-short">This uses a short hex color (#f06).</p>
+    <p class="rgb-color">This uses an RGB color (rgb(255, 99, 71)).</p>
+    <p class="rgba-color">This uses an RGBA color (rgba(255, 99, 71, 0.5)).</p>
+    <p class="hsl-color">This uses an HSL color (hsl(120, 100%, 50%)).</p>
+    <p class="hsla-color">This uses an HSLA color (hsla(120, 100%, 50%, 0.5)).</p>
+
+    <div class="current-color">
+        This div uses a direct color (#ff6347).
+        <p class="current-color-child">This paragraph uses currentColor.</p>
+    </div>
+
+    <p class="transparent-bg">This has a transparent background.</p>
+
+    <div style="color: blue;">
+        <p class="inherit-color">This paragraph inherits the parent div's color (blue).</p>
+    </div>
+</body>
+</html>

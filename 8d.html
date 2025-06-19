@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Loop Examples</title>
+  <script>
+    function printObjectData() {
+      const person = {
+        name: "hijyo",
+        age: 90,
+        city: "Mallagudu"
+      };
+
+      let result = "Using for-in loop:\n";
+      for (let key in person) {
+        result += `${key}: ${person[key]}\n`;
+      }
+
+      result += "\nUsing forEach loop (on entries):\n";
+      Object.entries(person).forEach(([key, value]) => {
+        result += `${key}: ${value}\n`;
+      });
+
+      result += "\nUsing for-of loop (on keys):\n";
+      for (let key of Object.keys(person)) {
+        result += `${key}: ${person[key]}\n`;
+      }
+
+      alert(result);
+    }
+  </script>
+</head>
+<body>
+  <h2>Loop Through Object Data</h2>
+  <button onclick="printObjectData()">Print Object Info</button>
+</body>
+</html>

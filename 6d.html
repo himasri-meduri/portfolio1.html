@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter Info</title>
+</head>
+<body>
+  <h2>Voter Eligibility Check</h2>
+  <div id="voterTable"></div>
+
+  <script>
+    let name = prompt("Enter your name:");
+    let age = parseInt(prompt("Enter your age:"));
+
+    let canVote = (age >= 18) ? "Eligible to Vote" : "Not Eligible to Vote";
+
+    document.getElementById("voterTable").innerHTML = `
+      <table border="1" cellpadding="10">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>${name}</td>
+          <td>${age}</td>
+          <td>${canVote}</td>
+        </tr>
+      </table>
+    `;
+  </script>
+</body>
+</html>

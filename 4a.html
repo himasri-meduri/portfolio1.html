@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selector Types</title>
+  <style>
+    /* Simple Selectors */
+    p {
+      color: darkblue;
+    }
+
+    #main {
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    h1, h2 {
+      color: darkgreen;
+    }
+
+    * {
+      font-family: Arial;
+    }
+
+    /* Combinator Selectors */
+    div p {
+      font-style: italic; /* Descendant */
+    }
+
+    ul > li {
+      color: brown; /* Child */
+    }
+
+    h2 + p {
+      color: purple; /* Adjacent sibling */
+    }
+
+    h2 ~ p {
+      font-weight: bold; /* General sibling */
+    }
+
+    /* Pseudo-class Selectors */
+    a:hover {
+      color: red;
+    }
+
+    li:first-child {
+      font-size: 18px;
+    }
+
+    li:nth-child(odd) {
+      background-color: #eef;
+    }
+
+    /* Pseudo-element Selectors */
+    p::first-line {
+      text-transform: uppercase;
+    }
+
+    h1::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    h1::after {
+      content: " ★";
+      color: gold;
+    }
+
+    /* Attribute Selectors */
+    input[type="text"] {
+      border: 2px solid green;
+    }
+
+    a[href^="https"] {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main">Welcome to CSS Selectors</h1>
+
+  <h2 class="highlight">Simple and Combinator Selectors</h2>
+  <p>This is a paragraph after h2.</p>
+  <p>This is a general sibling paragraph.</p>
+
+  <div>
+    <p>This is a descendant paragraph inside div.</p>
+  </div>
+
+  <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+  </ul>
+
+  <h2>More Selectors</h2>
+  <a href="https://example.com">Visit Example</a><br><br>
+  <input type="text" placeholder="Enter your name"><br><br>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal and External JavaScript</title>
+    <script>
+        function showInternalMessage() {
+            alert('This is an internal JavaScript alert!');
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Integration</h1>
+
+    <button onclick="showInternalMessage()">Click for Internal JS</button>
+    <button onclick="showExternalMessage()">Click for External JS</button>
+    <script src="script.js"></script>
+</body>
+</html>

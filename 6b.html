@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output Methods</title>
+    <script>
+        function showAlert() {
+            alert('This is an alert box!');
+        }
+        function logToConsole() {
+            console.log('This is a console log message.');
+        }
+        function writeToDocument() {
+            document.write('This text is written directly to the document!');
+        }
+        function changeContent() {
+            document.getElementById('output').innerHTML = 'Content changed using innerHTML!';
+        }
+    </script>
+
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="logToConsole()">Log to Console</button>
+    <button onclick="writeToDocument()">Write to Document</button>
+    <button onclick="changeContent()">Change HTML Content</button>
+    <p id="output">This is the original content.</p>
+</body>
+</html>
